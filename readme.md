@@ -1,4 +1,3 @@
-```markdown
 # PostgreSQL with Adminer Docker Compose Setup
 
 This repository contains a Docker Compose configuration for setting up a PostgreSQL database container along with an Adminer container for a web-based database management interface.
@@ -15,11 +14,9 @@ This repository contains a Docker Compose configuration for setting up a Postgre
 2. Navigate to the directory containing the `docker-compose.yml` file.
 
 3. Run the following command to start the containers:
-```
 
-docker-compose up -d
 
-````
+`docker-compose up -d`
 
 This command will start the PostgreSQL and Adminer containers in detached mode.
 
@@ -47,7 +44,7 @@ services:
     restart: always
     ports:
       - 8080:8080
-````
+```
 
 ### PostgreSQL Container
 
@@ -76,7 +73,7 @@ To access the PostgreSQL database running in the Docker container, you can use a
 
 2. Connect to the database using the following command:
 
-```
+```bash
 docker exec -it <container-id-or-name> psql -U postgres
 ```
 
@@ -108,7 +105,7 @@ The PostgreSQL data is stored in the `./data/db` directory on your local machine
 
 To stop and remove the PostgreSQL and Adminer containers, run the following command:
 
-```
+```bash
 docker-compose down
 ```
 
