@@ -15,7 +15,6 @@ This repository contains a Docker Compose configuration for setting up a Postgre
 
 3. Run the following command to start the containers:
 
-
 `docker-compose up -d`
 
 This command will start the PostgreSQL and Adminer containers in detached mode.
@@ -118,3 +117,10 @@ rm -rf ./data/db
 ```
 
 Change permissions of the `./data/db` directory if needed.
+
+## Access psql in the container
+
+```bash
+docker exec -it <container-id-or-name "postgres-db-1"> bash
+psql -U postgres
+```
